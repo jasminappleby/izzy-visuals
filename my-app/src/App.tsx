@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import { Routes, Route, Link } from 'react-router'
+import { Routes, Route, Link, Outlet } from 'react-router'
 import './App.css'
 
 function App() {
@@ -18,7 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery" element={<Gallery />} >
+          <Route path="events" element={<Events />} />
+          <Route path="sports" element={<Sports />} />
+          <Route path="lifestyle" element={<Lifestyle />} />
+        </Route>
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <div>
@@ -55,7 +59,29 @@ function About() {
 }
 
 function Gallery() {
-  return <h1>Gallery</h1>
+  return (
+    <div>
+      <h1>Gallery</h1>
+      <nav>
+        <Link to='/gallery/events'>Events</Link>
+        <Link to='/gallery/sports'>Sports</Link>
+        <Link to='/gallery/lifestyle'>Lifestyle</Link>
+      </nav>
+      <Outlet />
+    </div>
+  )
+}
+
+function Events() {
+  return <h1>Events</h1>
+}
+
+function Sports() {
+  return <h1>Sports</h1>
+}
+
+function Lifestyle() {
+  return <h1>Lifestyle</h1>
 }
 
 function Contact() {
