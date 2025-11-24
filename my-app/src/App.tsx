@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { Routes, Route, Link } from 'react-router'
 import './App.css'
 
 function App() {
@@ -8,6 +9,18 @@ function App() {
 
   return (
     <>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/gallery">Gallery</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -30,6 +43,23 @@ function App() {
       </p>
     </>
   )
+}
+
+// Page components
+function Home() {
+  return <h1>Home</h1>
+}
+
+function About() {
+  return <h1>About</h1>
+}
+
+function Gallery() {
+  return <h1>Gallery</h1>
+}
+
+function Contact() {
+  return <h1>Contact</h1>
 }
 
 export default App
