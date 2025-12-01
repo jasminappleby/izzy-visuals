@@ -1,12 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import { Routes, Route, Link, Outlet } from 'react-router'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <nav>
@@ -15,36 +10,17 @@ function App() {
         <Link to="/gallery">Gallery</Link>
         <Link to="/contact">Contact</Link>
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} >
+        <Route path="/gallery" element={<Gallery />}>
           <Route path="events" element={<Events />} />
           <Route path="sports" element={<Sports />} />
           <Route path="lifestyle" element={<Lifestyle />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
@@ -63,9 +39,9 @@ function Gallery() {
     <div>
       <h1>Gallery</h1>
       <nav>
-        <Link to='/gallery/events'>Events</Link>
-        <Link to='/gallery/sports'>Sports</Link>
-        <Link to='/gallery/lifestyle'>Lifestyle</Link>
+        <Link to="/gallery/events">Events</Link>
+        <Link to="/gallery/sports">Sports</Link>
+        <Link to="/gallery/lifestyle">Lifestyle</Link>
       </nav>
       <Outlet />
     </div>
