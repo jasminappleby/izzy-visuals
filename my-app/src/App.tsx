@@ -1,4 +1,4 @@
-import { Routes, Route, Link, Outlet } from 'react-router'
+import { Routes, Route, Link, Outlet } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
 // Page components
 function Home() {
-  return <h1>Home</h1>
+  return <h1 style={{fontSize: '100px'}}>Home</h1>
 }
 
 function About() {

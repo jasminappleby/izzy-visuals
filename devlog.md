@@ -24,3 +24,6 @@ This could easily grow more, but I am now aware of how to route things.
 
 01/12/2025
 
+Removed the React/Vite garb from the App.tsx to stop myself from getting confused.
+Updated react-router to react-router-dom as there was a mismatch in my versioning. 
+To run a view of the app in-browser, run `npm run dev` in an npm console.
