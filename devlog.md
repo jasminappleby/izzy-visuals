@@ -27,3 +27,8 @@ This could easily grow more, but I am now aware of how to route things.
 Removed the React/Vite garb from the App.tsx to stop myself from getting confused.
 Updated react-router to react-router-dom as there was a mismatch in my versioning. 
 To run a view of the app in-browser, run `npm run dev` in an npm console.
+
+07/12/2025
+
+Tried to build a darkmode button via this: (website)[https://css-tricks.com/easy-dark-mode-and-multiple-color-themes-in-react/] but it just won't work. 
+Going to push up code anyway as a progress report. 
