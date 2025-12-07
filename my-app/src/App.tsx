@@ -13,7 +13,6 @@ function App() {
   }
 
   return (
-    <>
       <div className="app" data-theme={theme}>
         <nav>
           <Link to="/">Home</Link>
@@ -34,12 +33,10 @@ function App() {
         </Routes>
 
         <button onClick={switchTheme}>
-          {theme == 'light' ? 'dark' : 'light'}
+          {theme == 'light' ? '☾' : '𖤓'}
         </button>
         <Block />
       </div>
-
-    </>
   )
 }
 
