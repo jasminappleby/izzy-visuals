@@ -32,3 +32,8 @@ To run a view of the app in-browser, run `npm run dev` in an npm console.
 
 Tried to build a darkmode button via this: (website)[https://css-tricks.com/easy-dark-mode-and-multiple-color-themes-in-react/] but it just won't work. 
 Going to push up code anyway as a progress report. 
+
+10/12/2025 
+Looked into dark mode issue and have resolved this, was an issue with App being named app somewhere. 
+Fixed the button in bottom right corner for east access on mobile but may need to move it when I add navbar implementation. This is the next part of the project I am looking into. 
+Oh and we want Gold as an accent colour. 

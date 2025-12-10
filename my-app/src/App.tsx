@@ -1,5 +1,4 @@
 import { Routes, Route, Link, Outlet } from 'react-router-dom'
-import Block from './components/block'
 import useLocalStorage from 'use-local-storage'
 import './App.css'
 
@@ -13,7 +12,7 @@ function App() {
   }
 
   return (
-      <div className="app" data-theme={theme}>
+      <div className="App" data-theme={theme}>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
@@ -32,17 +31,16 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        <button onClick={switchTheme}>
-          {theme == 'light' ? '☾' : '𖤓'}
+        <button onClick={switchTheme} id="fixed-button"> 
+          {theme == 'light' ? '🌙' : '☀️'}
         </button>
-        <Block />
       </div>
   )
 }
 
 // Page components
 function Home() {
-  return <h1 style={{fontSize: '100px'}}>Home</h1>
+  return <h1 style={{fontSize: '50px', textAlign:'center'}}>Izzy Visuals</h1>
 }
 
 function About() {
