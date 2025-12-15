@@ -13,11 +13,12 @@ function App() {
 
   return (
       <div className="App" data-theme={theme}>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/gallery">Gallery</Link>
-          <Link to="/contact">Contact</Link>
+        <nav className="mobile-nav">
+          {/* <img src="/src/assets/logo.png" alt="Logo" className="icon"/> */}
+          <Link to="/" className="icon">Home</Link>
+          <Link to="/about" className="icon">About</Link>
+          <Link to="/gallery" className="icon">Gallery</Link>
+          <Link to="/contact" className="icon">Contact</Link>
         </nav>
 
         <Routes>

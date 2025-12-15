@@ -37,3 +37,7 @@ Going to push up code anyway as a progress report.
 Looked into dark mode issue and have resolved this, was an issue with App being named app somewhere. 
 Fixed the button in bottom right corner for east access on mobile but may need to move it when I add navbar implementation. This is the next part of the project I am looking into. 
 Oh and we want Gold as an accent colour. 
+
+# 15/12/2025
+Added basic nav bar ui, need to find the website I saw on my macbook which had a great UI example. 
+Played around with CSS a bit. Trying to get a good base. 

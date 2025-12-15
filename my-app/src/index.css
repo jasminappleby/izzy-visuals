@@ -50,8 +50,8 @@ button:focus-visible {
 }
 #fixed-button{
   position: fixed; 
-  bottom: 40px; 
-  right: 40px;
+  bottom: 80px; 
+  right: 30px;
 }
 
 /* Hyperlinks */
@@ -65,8 +65,8 @@ a:hover {
 }
 
 /* Fonts */
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0;
 }
