@@ -41,3 +41,7 @@ Oh and we want Gold as an accent colour.
 # 15/12/2025
 Added basic nav bar ui, need to find the website I saw on my macbook which had a great UI example. 
 Played around with CSS a bit. Trying to get a good base. 
+
+# 28/12/2025
+Took a bit of a break, but built nav bar now for mob and desktop, need to work on the navigation for the gallery.
+For the most part I think I need to just tidy it up + figure out what content goes on what pages. Installed font awesome so I can use the emojis for the mobile nav, rather than generic emojis. 
