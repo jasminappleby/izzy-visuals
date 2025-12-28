@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding-bottom: 70px;
 }
 
 .App {
@@ -9,6 +10,7 @@ body {
   font-weight: bold;
   min-height: 100vh;
   transition: all 1s;
+  min-height: 100vh;
 }
 
 /* nav */
@@ -18,23 +20,218 @@ body {
   }
 }
 
+
+/* desktop nav */
+.desktop-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--background, #ffffff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  padding: 0 3rem;
+}
+
+.desktop-nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color, #1f2937);
+}
+
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav ul li {
+  list-style: none;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: var(--text-secondary, #4b5563);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.desktop-nav ul li a:hover {
+  color: var(--text-color, #111827);
+}
+
+.desktop-nav ul li a.active {
+  color: var(--text-color, #111827);
+  font-weight: 600;
+}
+
+.desktop-nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--text-color, #111827);
+}
+
+/* mobile nav */
 .mobile-nav {
-  background: #F1F1F1;
+  display: flex;
   position: fixed;
   bottom: 0;
-  height: 65px;
-  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--background, #ffffff);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  padding: 8px 0 8px 0;
+  border-top: 1px solid var(--border, #f3f4f6);
+}
+
+.mobile-nav ul {
   display: flex;
   justify-content: space-around;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* not added yet but for nav icons */
-.icon img {
-  width: 30px;
+.mobile-nav li {
+  flex: 1;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-muted, #9ca3af);
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav a.active {
+  color: var(--text-color, #111827);
+}
+
+.mobile-nav .icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  transition: transform 0.2s ease;
+}
+
+.mobile-nav a.active .icon {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.mobile-nav .label {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.mobile-nav a.active .label {
+  font-weight: 700;
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  min-height: calc(100vh - 140px);
+}
+
+/* gallery nav - may scrap for an alternative?? */
+.gallery-nav {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.gallery-nav a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color, #111827);
+  background-color: var(--background-secondary, #f3f4f6);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.gallery-nav a:hover {
+  background-color: var(--border, #e5e7eb);
+}
+
+#fixed-button {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 999;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+    padding-top: 70px;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .page-content {
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 140px);
+  }
+
+  #fixed-button {
+    bottom: 20px;
+  }
 }
