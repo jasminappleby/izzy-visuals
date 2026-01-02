@@ -45,3 +45,6 @@ Played around with CSS a bit. Trying to get a good base.
 # 28/12/2025
 Took a bit of a break, but built nav bar now for mob and desktop, need to work on the navigation for the gallery.
 For the most part I think I need to just tidy it up + figure out what content goes on what pages. Installed font awesome so I can use the emojis for the mobile nav, rather than generic emojis. 
+
+# 02/01/2026
+Changed icons to fontawrsome ones, I don't really like the gold colouring but Isreal wanted that, I hope he asks for a nice rich blue tbh but might also look a tad dog. Never really know what colouring looks good and what looks basic/tacky. 

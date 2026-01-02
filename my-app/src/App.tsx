@@ -1,5 +1,8 @@
 import { Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
 import useLocalStorage from 'use-local-storage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHomeUser, faImages, faInbox, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
+
 import './App.css'
 
 function App() {
@@ -30,25 +33,25 @@ function App() {
           <ul>
             <li>
               <Link to="/" className={isActive('/') ? 'active' : ''}>
-                <span className="icon">🏠</span>
+                <span className="icon"><FontAwesomeIcon icon={faHomeUser} color="#DAA520" /></span>
                 <span className="label">Home</span>
               </Link>
             </li>
             <li>
               <Link to="/about" className={isActive('/about') ? 'active' : ''}>
-                <span className="icon">👤</span>
+                <span className="icon"><FontAwesomeIcon icon={faUser} color="#DAA520" /></span>
                 <span className="label">About</span>
               </Link>
             </li>
             <li>
               <Link to="/gallery" className={isActive('/gallery') || location.pathname.startsWith('/gallery/') ? 'active' : ''}>
-                  <span className="icon">📷</span>
+                  <span className="icon"><FontAwesomeIcon icon={faImages} color="#DAA520" /></span>
                   <span className="label">Gallery</span>
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
-                  <span className="icon">✉️</span>
+                  <span className="icon"><FontAwesomeIcon icon={faInbox} color="#DAA520" /></span>
                   <span className="label">Contact</span>
                 </Link>
               </li>
@@ -84,7 +87,7 @@ function App() {
         </Routes>
 
         <button onClick={switchTheme} id="fixed-button"> 
-          {theme === 'light' ? '🌙' : '☀️'}
+         {theme === 'light' ? <FontAwesomeIcon icon={faSun} color="#DAA520" /> : <FontAwesomeIcon icon={faMoon} color="#DAA520" />}
         </button>
       </div>
   )
