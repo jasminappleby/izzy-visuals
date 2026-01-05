@@ -21,14 +21,6 @@ function App() {
 
   return (
       <div className="App" data-theme={theme}>
-        {/* <nav className="mobile-nav"> */}
-          {/* <img src="/src/assets/logo.png" alt="Logo" className="icon"/> */}
-          {/* <Link to="/" className="icon">Home</Link>
-          <Link to="/about" className="icon">About</Link>
-          <Link to="/gallery" className="icon">Gallery</Link>
-          <Link to="/contact" className="icon">Contact</Link>
-        </nav> */}
-
         <nav className="mobile-nav">
           <ul>
             <li>
@@ -97,7 +89,8 @@ function App() {
 function Home() {
   return (
   <div className="page-content">
-     <h1 style={{fontSize: '50px', textAlign:'center'}}>Izzy Visuals</h1>
+    <h1 style={{textAlign:'left'}}>Izzy</h1>
+    <h1 style={{textAlign:'right'}}>Visuals</h1>
   </div>
   )
 }
@@ -105,7 +98,7 @@ function Home() {
 function About() {
   return (
   <div className="page-content">
-    <h1>About</h1>
+    <h1 style={{fontSize: '50px', textAlign:'center'}}>About Me</h1>
   </div>
 )
 }
@@ -113,8 +106,8 @@ function About() {
 function Gallery() {
   return (
     <div className="gallery-nav">
-      <h1>Gallery</h1>
-      <nav>
+      <h1 style={{fontSize: '50px', textAlign:'center'}}>Gallery</h1>
+      <nav style={{display: 'flex', flexDirection: 'column', gap: '100px', alignItems: 'center'}}>
         <Link to="/gallery/events">Events</Link>
         <Link to="/gallery/sports">Sports</Link>
         <Link to="/gallery/lifestyle">Lifestyle</Link>
@@ -124,27 +117,39 @@ function Gallery() {
   )
 }
 
+// gallery child pages
+
 function Events() {
   return (
-    <h1>Events</h1>
+    <div className="page-content">
+    <h1 style={{fontSize: '30px', textAlign:'center'}}>Events</h1>
+    </div>
   )
 }
 
 function Sports() {
   return (
-    <h1>Sports</h1>
+    <div className="page-content">
+      <h1 style={{fontSize: '30px', textAlign:'center'}}>Sports</h1>
+    </div>
   )
 }
 
 function Lifestyle() {
   return ( 
-    <h1>Lifestyle</h1>
+    <div className="page-content">
+      <h1 style={{fontSize: '30px', textAlign:'center'}}>Lifestyle</h1>
+    </div>
   )
 }
 
+// back to regular pages 
+
 function Contact() {
   return (
-    <h1>Contact</h1>
+    <div className="page-content">
+      <h1 style={{fontSize: '50px', textAlign:'center'}}>Contact Me</h1>
+    </div>
   )
 }
 

@@ -185,6 +185,11 @@ body {
   min-height: calc(100vh - 140px);
 }
 
+.page-content h1 {
+  font-size: 100px;
+}
+
+
 /* gallery nav - may scrap for an alternative?? */
 .gallery-nav {
   display: flex;
@@ -234,4 +239,9 @@ body {
   #fixed-button {
     bottom: 20px;
   }
+
+  .page-content h1 {
+    font-size: 200px;
+  }
+
 }

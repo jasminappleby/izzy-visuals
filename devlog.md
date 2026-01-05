@@ -48,3 +48,6 @@ For the most part I think I need to just tidy it up + figure out what content go
 
 # 02/01/2026
 Changed icons to fontawrsome ones, I don't really like the gold colouring but Isreal wanted that, I hope he asks for a nice rich blue tbh but might also look a tad dog. Never really know what colouring looks good and what looks basic/tacky. 
+
+# 05/01/2025 
+Started playing with home page UI, wanna get a good basis. Playing with font sizding, colours, fonts, etc.
