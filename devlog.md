@@ -52,3 +52,6 @@ Changed icons to fontawrsome ones, I don't really like the gold colouring but Is
 # 05/01/2025 
 Started playing with home page UI, wanna get a good basis. Playing with font sizding, colours, fonts, etc.
 - note: change sun icon, Isreal said it looks like settings (he is right)
+
+# 15/01/2025
+Added content to About Me page and added footer on all pages
