@@ -65,8 +65,6 @@ function App() {
             </div>
           </nav> 
         
-
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -79,19 +77,25 @@ function App() {
         </Routes>
 
         <button onClick={switchTheme} id="fixed-button"> 
-         {theme === 'light' ? <FontAwesomeIcon icon={faSun} color="#DAA520" /> : <FontAwesomeIcon icon={faMoon} color="#DAA520" />}
+          {theme === 'light' ? <FontAwesomeIcon icon={faSun} color="#DAA520" /> : <FontAwesomeIcon icon={faMoon} color="#DAA520" />}
         </button>
       </div>
   )
 }
 
-// Page components
 function Home() {
   return (
-  <div className="page-content">
-    <h1 style={{textAlign:'left'}}>Izzy</h1>
-    <h1 style={{textAlign:'right'}}>Visuals</h1>
-  </div>
+    <div className="page-content">
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap'}}>
+        <h1 style={{flex: '0 0 auto'}}>Izzy</h1>
+        <img src="/images/landscape-placeholder.jpg" alt="placeholder image" style={{ flex: '1', maxWidth: '60%', height: 'auto', objectFit: 'cover'}}/>
+      </div>
+      
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap', marginTop: '20px'}}>
+        <img src="/images/landscape-placeholder.jpg" alt="placeholder image" style={{ flex: '1', maxWidth: '60%', height: 'auto', objectFit: 'cover' }}/>
+        <h1 style={{flex: '0 0 auto'}}>Visuals</h1>
+      </div>
+    </div>
   )
 }
 
