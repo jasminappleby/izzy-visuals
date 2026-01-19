@@ -54,4 +54,10 @@ Started playing with home page UI, wanna get a good basis. Playing with font siz
 - note: change sun icon, Isreal said it looks like settings (he is right)
 
 # 15/01/2025
-Added content to About Me page and added footer on all pages
+Added content to About Me page and added footer on all pages.
+
+# 19/01/2025
+Added carousel to gallery page, how I imagined it. Still got placeholder images atm. Want to be able to swap out the images easily as and when but might do that myself backend wise. Not got any content on the niche pages yet, need Big Swizz to send me the content he wants featured. Then I guess its just ensuring that looks alright.
+Plan for that is probably a camera roll type vibe, can click to expand image, can swipe or scroll through images left and right, and also maybe split into event categories with like a contents page type thing, on the same page, so you can jump down to any event. 
+For the about me, maybe discuss things like turn around, how photos are delivered, availability? 
+Contact page is there, phone number??? Do we wanna publisize his legit phone number? Idk about all that. 
