@@ -2,7 +2,7 @@ import { Routes, Route, Link, Outlet, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import useLocalStorage from 'use-local-storage'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHomeUser, faImages, faInbox, faMoon, faSun, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import './App.css'
 
