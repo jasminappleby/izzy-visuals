@@ -78,7 +78,8 @@ function App() {
         </Routes>
 
         <button onClick={switchTheme} id="fixed-button"> 
-          {theme === 'light' ? <FontAwesomeIcon icon={faSun} color="#DAA520" /> : <FontAwesomeIcon icon={faMoon} color="#DAA520" />}
+          {/* {theme === 'light' ? <FontAwesomeIcon icon={faSun} color="#DAA520" /> : <FontAwesomeIcon icon={faMoon} color="#DAA520" />} */}
+          {theme === 'light' ? '🌙' : '☀️'}
         </button>
 
         <footer className="site-footer">
