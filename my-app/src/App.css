@@ -201,7 +201,11 @@ body {
 }
 
 .gallery-carousel-section:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 25px #0000004d;
+}
+
+[data-theme='dark'] .gallery-carousel-section:hover {
+  box-shadow: 0 2px 25px #ffffff46;
 }
 
 .gallery-carousel-title {
