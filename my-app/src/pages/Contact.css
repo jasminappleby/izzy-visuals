@@ -1,0 +1,189 @@
+/* faq */
+.faq-prompt {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border-left: 4px solid #daa520;
+  border-radius: 4px;
+  text-align: center;
+}
+
+[data-theme="dark"] .faq-prompt {
+  background-color: #1a3a3a;
+  border-left-color: #daa520;
+}
+
+.faq-prompt p {
+  margin: 0;
+  color: var(--text-color, #333);
+}
+
+[data-theme="dark"] .faq-prompt p {
+  color: var(--text-color, #ccc);
+}
+
+.faq-prompt a {
+  color: #daa520;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faq-prompt a:hover {
+  text-decoration: underline;
+  color: #c99419;
+}
+
+/* contact form */
+.contact-form-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.contact-form {
+  background-color: var(--form-bg, #f9f9f9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .contact-form {
+  background-color: var(--form-bg, #2a2a2a);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #c3e6cb;
+}
+
+[data-theme="dark"] .success-message {
+  background-color: #1e4620;
+  color: #95d5b2;
+  border-color: #40916c;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color, #333);
+}
+
+[data-theme="dark"] .form-group label {
+  color: var(--text-color, #fff);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--input-bg, #fff);
+  color: var(--text-color, #333);
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  max-height: 300px;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+  background-color: var(--input-bg, #333);
+  border-color: var(--border-color, #444);
+  color: var(--text-color, #fff);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #daa520;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+}
+
+.date-group {
+  margin-bottom: 2rem;
+}
+
+.label-with-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-button {
+  background-color: #daa520;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 0;
+}
+
+.info-button:hover {
+  background-color: #c99419;
+  transform: scale(1.1);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #daa520;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #c99419;
+}
+
+.submit-button:active {
+  transform: translateY(2px);
+}
+

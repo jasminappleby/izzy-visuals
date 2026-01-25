@@ -190,7 +190,7 @@ body {
 }
 
 /* gallery carousel */
-.gallery-carousel-section {
+/* .gallery-carousel-section {
   margin-bottom: 48px;
   overflow: hidden;
   text-decoration: none;
@@ -243,9 +243,9 @@ body {
   object-fit: cover;
   pointer-events: none;
 }
-
+*/
 /* gallery carousel for mobile */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .gallery-carousel-item {
     flex: 0 0 200px;
     height: 150px;
@@ -258,7 +258,7 @@ body {
   .gallery-carousel-section {
     padding: 16px;
   }
-}
+}  */
 
 /* footer */
 .site-footer {
