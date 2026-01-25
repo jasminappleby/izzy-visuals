@@ -49,15 +49,18 @@ For the most part I think I need to just tidy it up + figure out what content go
 # 02/01/2026
 Changed icons to fontawrsome ones, I don't really like the gold colouring but Isreal wanted that, I hope he asks for a nice rich blue tbh but might also look a tad dog. Never really know what colouring looks good and what looks basic/tacky. 
 
-# 05/01/2025 
+# 05/01/2026
 Started playing with home page UI, wanna get a good basis. Playing with font sizding, colours, fonts, etc.
 - note: change sun icon, Isreal said it looks like settings (he is right)
 
-# 15/01/2025
+# 15/01/2026
 Added content to About Me page and added footer on all pages.
 
-# 19/01/2025
+# 19/01/2026
 Added carousel to gallery page, how I imagined it. Still got placeholder images atm. Want to be able to swap out the images easily as and when but might do that myself backend wise. Not got any content on the niche pages yet, need Big Swizz to send me the content he wants featured. Then I guess its just ensuring that looks alright.
 Plan for that is probably a camera roll type vibe, can click to expand image, can swipe or scroll through images left and right, and also maybe split into event categories with like a contents page type thing, on the same page, so you can jump down to any event. 
 For the about me, maybe discuss things like turn around, how photos are delivered, availability? 
 Contact page is there, phone number??? Do we wanna publisize his legit phone number? Idk about all that. 
+
+# 25/01/2026
+i wanna get the site out lol

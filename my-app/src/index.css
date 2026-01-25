@@ -29,7 +29,7 @@ html, body {
 }
 
 /* Dark mode button styling */
-button {
+#fixed-button {
   border-radius: 50%;
   border: 1px solid transparent;
   padding: 10px 12px;
@@ -41,11 +41,11 @@ button {
   cursor: pointer;
   transition: border-color 0.5s;
 }
-button:hover {
+#fixed-button:hover {
   border-color: #e2df3bd8;
 }
-button:focus,
-button:focus-visible {
+#fixed-button:focus,
+#fixed-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 #fixed-button{

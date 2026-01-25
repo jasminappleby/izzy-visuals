@@ -51,7 +51,7 @@ ${formData.message}
     `.trim()
 
     // Open email client
-    const subject = `Photography Inquiry from ${formData.firstName}`
+    const subject = `Photography Enquiry from ${formData.firstName}`
     window.location.href = `mailto:Izzyvisuals14@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
 
     // Reset form
@@ -78,46 +78,23 @@ ${formData.message}
       
       <div className="contact-form-container">
         <form onSubmit={handleSubmit} className="contact-form">
-          {submitted && <div className="success-message">Thank you! Your email client has opened with your inquiry.</div>}
+          {submitted && <div className="success-message">Thank you! Your email client has opened with your enquiry.</div>}
           
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="firstName">First Name *</label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                placeholder="Your first name"
-                required
-              />
+              <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="Your first name" required />
             </div>
 
             <div className="form-group">
-              <label htmlFor="surname">Surname</label>
-              <input
-                type="text"
-                id="surname"
-                name="surname"
-                value={formData.surname}
-                onChange={handleChange}
-                placeholder="Your surname (optional)"
-              />
+              <label htmlFor="surname">Surname *</label>
+              <input type="text" id="surname" name="surname" value={formData.surname} onChange={handleChange} placeholder="Your surname" required />
             </div>
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email Address *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="your.email@example.com"
-              required
-            />
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} placeholder="your.email@example.com" required />
           </div>
 
           <div className="form-group">
@@ -175,12 +152,9 @@ ${formData.message}
               rows={5}
             />
           </div>
-
-          <button type="submit" className="submit-button">Send Inquiry</button>
+          <button type="submit" className="submit-button">Send Enquiry</button>
         </form>
       </div>
-
-
     </div>
   )
 }

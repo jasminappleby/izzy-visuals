@@ -15,6 +15,21 @@ function Gallery() {
       <h1 style={{fontSize: '50px', textAlign:'center', marginBottom: '3rem'}}>Gallery</h1>
       
       <GalleryCarousel 
+        title="Sports" 
+        link="/gallery/sports"
+        images={[
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+        ]}
+      />
+      
+      <GalleryCarousel 
         title="Events" 
         link="/gallery/events"
         images={[
@@ -29,20 +44,6 @@ function Gallery() {
         ]}
       />
       
-      <GalleryCarousel 
-        title="Sports" 
-        link="/gallery/sports"
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
-      />
       
       <GalleryCarousel 
         title="Lifestyle" 
