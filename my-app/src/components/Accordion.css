@@ -5,14 +5,11 @@
 
 .accordion-item {
   margin-bottom: 1rem;
-  /* border: 1px inset;
-  border-radius: 5px; */
-  border-bottom: 1px solid;
+  border-radius: 5px; 
   overflow: hidden;
 }
 
 .accordion-button {
-  /* background-image: linear-gradient(#ffffff 85%, #ffffff81); */
   background-color: #f0f8ff;
   width: 100%;
   padding: 1rem;
