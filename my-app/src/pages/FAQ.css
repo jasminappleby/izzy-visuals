@@ -12,6 +12,10 @@
   color: var(--text-color, #ccc);
 }
 
+.faqItems {
+    font-weight: lighter;
+}
+
 .faq-footer {
   text-align: center;
   margin-top: 3rem;

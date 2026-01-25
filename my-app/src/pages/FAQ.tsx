@@ -64,12 +64,12 @@ function FAQ() {
   return (
     <div className="page-content">
       <h1 style={{fontSize: '50px', textAlign:'center'}}>Frequently Asked Questions</h1>
-      <p className="faq-intro">Find answers to common questions about booking, pricing, and our services.</p>
+      <p className="faq-intro">Find answers to common questions about booking, pricing, and services offered.</p>
       
       <Accordion items={faqItems} allowMultiple={true} />
 
       <div className="faq-footer">
-        <p>Still have questions? <Link to="/contact">Contact us directly</Link> and I'll be happy to help!</p>
+        <p>Still have questions? <Link to="/contact">Contact me directly</Link> and I'll be happy to help!</p>
       </div>
     </div>
   )

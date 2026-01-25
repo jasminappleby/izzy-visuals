@@ -12,6 +12,8 @@
 }
 
 .accordion-button {
+  /* background-image: linear-gradient(#ffffff 85%, #ffffff81); */
+  background-color: #f0f8ff;
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -22,11 +24,15 @@
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: background-color 0.3s ease;
 }
 
 .accordion-button.active {
   background-color: #f0e68c;
+}
+
+.accordion-button:hover {
+  background-color: #e0e8f0de;
+  transition: width .5s ease;
 }
 
 .accordion-title {
@@ -64,12 +70,13 @@
 
 /* dark mode */
 [data-theme="dark"] .accordion-button {
-  background-color: var(--accordion-bg, #333);
+  background-color: #1a3a3a;
   color: var(--text-color, #fff);
 }
 
 [data-theme="dark"] .accordion-button:hover {
-  background-color: var(--accordion-hover-bg, #444);
+  background-color: var(--accordion-hover-bg, #204747);
+  transition: width .5s ease;
 }
 
 [data-theme="dark"] .accordion-content {
