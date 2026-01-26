@@ -32,6 +32,10 @@
   transition: width .5s ease;
 }
 
+.accordion-button.active:hover {
+  background-color: #f0e68c;
+}
+
 .accordion-title {
   text-align: left;
 }
@@ -72,6 +76,16 @@
 }
 
 [data-theme="dark"] .accordion-button:hover {
+  background-color: var(--accordion-hover-bg, #204747);
+  transition: width .5s ease;
+}
+
+[data-theme="dark"] .accordion-button.active {
+  background-color: var(--accordion-hover-bg, #204747);
+  transition: width .5s ease;
+}
+
+[data-theme="dark"] .accordion-button.active:hover {
   background-color: var(--accordion-hover-bg, #204747);
   transition: width .5s ease;
 }

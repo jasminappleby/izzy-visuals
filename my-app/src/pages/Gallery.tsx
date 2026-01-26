@@ -59,6 +59,22 @@ function Gallery() {
           '/images/landscape-placeholder.jpg',
         ]}
       />
+
+{/* wedding - currently archived till needed */}
+      {/* <GalleryCarousel 
+        title="Wedding" 
+        link="/gallery/wedding"
+        images={[
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
+        ]}
+      /> */}
     </div>
   )
 }

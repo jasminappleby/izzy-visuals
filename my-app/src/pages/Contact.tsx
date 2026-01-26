@@ -40,15 +40,15 @@ function Contact() {
 
     // Construct email
     const emailBody = `
-Name: ${formData.firstName} ${formData.surname}
-Email: ${formData.email}
-Interested In: ${formData.interested}
-Proposed Date: ${formData.proposedDate}
-Event Location: ${formData.location}
+      Name: ${formData.firstName} ${formData.surname}
+      Email: ${formData.email}
+      Interested In: ${formData.interested}
+      Proposed Date: ${formData.proposedDate}
+      Event Location: ${formData.location}
 
-Message:
-${formData.message}
-    `.trim()
+      Message:
+      ${formData.message}
+          `.trim()
 
     // Open email client
     const subject = `Photography Enquiry from ${formData.firstName}`
@@ -72,6 +72,7 @@ ${formData.message}
     <div className="page-content">
       <h1 style={{fontSize: '50px', textAlign:'center'}}>Contact Me</h1>
 
+      <br/>
       <div className="faq-prompt">
         <p>Have questions? <a href="/contact/faq">Check out our FAQs</a> to learn more about how we work!</p>
       </div>
