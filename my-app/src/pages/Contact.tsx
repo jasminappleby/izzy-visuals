@@ -20,6 +20,8 @@ function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -29,8 +31,9 @@ function Contact() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setError('')
     
     // Validate required fields
     if (!formData.firstName || !formData.email || !formData.interested || !formData.proposedDate || !formData.location || !formData.message) {
@@ -38,34 +41,39 @@ function Contact() {
       return
     }
 
-    // Construct email
-    const emailBody = `
-      Name: ${formData.firstName} ${formData.surname}
-      Email: ${formData.email}
-      Interested In: ${formData.interested}
-      Proposed Date: ${formData.proposedDate}
-      Event Location: ${formData.location}
+    setLoading(true)
 
-      Message:
-      ${formData.message}
-          `.trim()
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // Open email client
-    const subject = `Photography Enquiry from ${formData.firstName}`
-    window.location.href = `mailto:Izzyvisuals14@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`
+      if (!response.ok) {
+        throw new Error('Failed to send enquiry')
+      }
 
-    // Reset form
-    setFormData({
-      firstName: '',
-      surname: '',
-      email: '',
-      interested: '',
-      proposedDate: '',
-      location: '',
-      message: '',
-    })
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+      // Reset form
+      setFormData({
+        firstName: '',
+        surname: '',
+        email: '',
+        interested: '',
+        proposedDate: '',
+        location: '',
+        message: '',
+      })
+      setSubmitted(true)
+      setTimeout(() => setSubmitted(false), 3000)
+    } catch (err) {
+      setError('Failed to send your enquiry. Please try again.')
+      console.error('Form submission error:', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -79,7 +87,8 @@ function Contact() {
       
       <div className="contact-form-container">
         <form onSubmit={handleSubmit} className="contact-form">
-          {submitted && <div className="success-message">Thank you! Your email client has opened with your enquiry.</div>}
+          {submitted && <div className="success-message">Thank you! Your enquiry has been sent successfully.</div>}
+          {error && <div className="error-message" style={{color: 'red', marginBottom: '20px', padding: '10px', backgroundColor: '#ffe6e6', borderRadius: '4px'}}>{error}</div>}
           
           <div className="form-row">
             <div className="form-group">
@@ -153,7 +162,9 @@ function Contact() {
               rows={5}
             />
           </div>
-          <button type="submit" className="submit-button">Send Enquiry</button>
+          <button type="submit" className="submit-button" disabled={loading}>
+            {loading ? 'Sending...' : 'Send Enquiry'}
+          </button>
         </form>
       </div>
     </div>

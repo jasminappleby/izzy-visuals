@@ -64,3 +64,8 @@ Contact page is there, phone number??? Do we wanna publisize his legit phone num
 
 # 25/01/2026
 i wanna get the site out lol
+
+# 26/01/2026
+need a backend function to enable contact form to send messages directly from the form rather than using a mailto: (lazy method imo but sucks because who the hell uses the mail app on macbook lol). now if you wanna run backend you gotta run `node server.js` on the top dir (above my-app dir)
+
+
