@@ -8,7 +8,17 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173'],
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
+
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ message: 'Server is running' });
+});
 
 // Configure your email service
 const transporter = nodemailer.createTransport({

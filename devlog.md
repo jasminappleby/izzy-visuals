@@ -68,4 +68,7 @@ i wanna get the site out lol
 # 26/01/2026
 need a backend function to enable contact form to send messages directly from the form rather than using a mailto: (lazy method imo but sucks because who the hell uses the mail app on macbook lol). now if you wanna run backend you gotta run `node server.js` on the top dir (above my-app dir)
 
-
+# 03/02/2026 
+all gallery pages have some sort of base now but view to imporove in future
+seems like the contact form works here on dev, would love to see how it functions on vercel etc. worries about the hosting part. 
+need to collect some images from izzy, for the page contents, and make the homepage less ugly
