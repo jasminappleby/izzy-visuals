@@ -12,6 +12,7 @@ import FAQ from './pages/FAQ'
 import Events from './pages/Events'
 import Sports from './pages/Sports'
 import Lifestyle from './pages/Lifestyle'
+import Rugby from './pages/Rugby'
 
 function App() {
   const location = useLocation();
@@ -80,6 +81,7 @@ function App() {
             <Route path="events" element={<Events />} />
             <Route path="sports" element={<Sports />} />
             <Route path="lifestyle" element={<Lifestyle />} />
+              <Route path="sports/rugby" element={<Rugby />} />
           </Route>
           <Route path="/contact" element={<Contact />}>
             <Route path="faq" element={<FAQ />} />

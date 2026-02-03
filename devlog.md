@@ -72,3 +72,6 @@ need a backend function to enable contact form to send messages directly from th
 all gallery pages have some sort of base now but view to imporove in future
 seems like the contact form works here on dev, would love to see how it functions on vercel etc. worries about the hosting part. 
 need to collect some images from izzy, for the page contents, and make the homepage less ugly
+
+note to self: randomise images that show up on the main gallery page so that every time a user goes onto it it shows diff pics pulled from each gallery under that section. showing a variety seems way cool. 
+

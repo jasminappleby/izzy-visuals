@@ -60,7 +60,7 @@ function Gallery() {
         ]}
       />
 
-{/* wedding - currently archived till needed */}
+{/* wedding - currently archived till needed - also can be used for deeper pages in future */}
       {/* <GalleryCarousel 
         title="Wedding" 
         link="/gallery/wedding"
@@ -81,14 +81,17 @@ function Gallery() {
 
 function GalleryCarousel({ title, link, images }: { title: string, link: string, images: string[] }) {
   const [offset, setOffset] = useState(0);
-
+  const imageWidth = 300; 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOffset((prev) => prev - 1);
+      setOffset((prev) => {
+        const newOffset = prev - 1;
+        return newOffset <= -imageWidth * images.length ? 0 : newOffset;
+      });
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length, imageWidth]);
 
   const duplicatedImages = [...images, ...images, ...images];
 
