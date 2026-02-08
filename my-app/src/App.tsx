@@ -8,11 +8,11 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
-import FAQ from './pages/FAQ'
-import Events from './pages/Events'
-import Sports from './pages/Sports'
-import Lifestyle from './pages/Lifestyle'
-import Rugby from './pages/Rugby'
+import FAQ from './pages/child pages/FAQ'
+import Events from './pages/child pages/Events'
+import Sports from './pages/child pages/Sports'
+import Lifestyle from './pages/child pages/Lifestyle'
+import Rugby from './pages/child pages/Rugby'
 
 function App() {
   const location = useLocation();
@@ -62,8 +62,11 @@ function App() {
         <nav className="desktop-nav">
             <div className="desktop-nav-content">
               <Link to="/" className="logo-link">
-                <div className="logo">📷</div>
-                <span className="logo-text">Izzy Visuals</span>
+                <img 
+                  src={theme === 'dark' ? '/images/izzy-visuals-logo.png' : '/images/izzy-visuals-logo.png'} 
+                  alt="Izzy Visuals Logo"
+                  className="logo"
+                />
               </Link>
               <ul>
                 <li><Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link></li>
