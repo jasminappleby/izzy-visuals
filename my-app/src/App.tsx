@@ -10,9 +10,16 @@ import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import FAQ from './pages/child pages/FAQ'
 import Events from './pages/child pages/Events'
+import Nightlife from './pages/child pages/Nightlife'
+import Birthday from './pages/child pages/Birthdays';
 import Sports from './pages/child pages/Sports'
-import Lifestyle from './pages/child pages/Lifestyle'
 import Rugby from './pages/child pages/Rugby'
+import Football from './pages/child pages/Football'
+import AmericanFootball from './pages/child pages/AmericanFootball'
+import Lifestyle from './pages/child pages/Lifestyle'
+import Graduation from './pages/child pages/Graduation'
+import Portraits from './pages/child pages/Portraits'
+import SiteMap from './pages/child pages/SiteMap'
 
 function App() {
   const location = useLocation();
@@ -82,13 +89,20 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />}>
             <Route path="events" element={<Events />} />
+              <Route path="events/birthdays" element={<Birthday />} />
+              <Route path="events/nightlife" element={<Nightlife />} />
             <Route path="sports" element={<Sports />} />
-            <Route path="lifestyle" element={<Lifestyle />} />
               <Route path="sports/rugby" element={<Rugby />} />
+              <Route path="sports/football" element={<Football />} />
+              <Route path="sports/americanfootball" element={<AmericanFootball />} />
+            <Route path="lifestyle" element={<Lifestyle />} />
+              <Route path="lifestyle/graduation" element={<Graduation />} />
+              <Route path="lifestyle/portraits" element={<Portraits />} />
           </Route>
           <Route path="/contact" element={<Contact />}>
             <Route path="faq" element={<FAQ />} />
           </Route>
+          <Route path="/sitemap" element={<SiteMap />} />
         </Routes>
 
         <button onClick={switchTheme} id="fixed-button"> 
@@ -102,6 +116,8 @@ function App() {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
               <span>•</span>
               <a href="mailto:Izzyvisuals14@gmail.com">Email</a>
+              <span>•</span>
+              <Link to="/sitemap">Site Map</Link>
             </div>
           </div>
         </footer>

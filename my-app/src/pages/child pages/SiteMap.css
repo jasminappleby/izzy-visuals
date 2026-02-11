@@ -1,0 +1,105 @@
+.page-content .sitemap {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sitemap h1 {
+  font-size: 3rem !important;
+  margin: 0 0 50px 0 !important;
+  text-align: center;
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sitemap-section {
+  padding: 30px;
+  background: rgba(218, 165, 32, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #DAA520;
+}
+
+.sitemap-section h2 {
+  font-size: 1.3rem;
+  margin: 0 0 20px 0;
+  color: #DAA520;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.sitemap-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-section li {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.sitemap-section a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.sitemap-section a:hover {
+  color: #DAA520;
+  border-bottom-color: #DAA520;
+}
+
+.sitemap-section span {
+  display: block;
+  font-weight: 600;
+  margin: 15px 0 10px 0;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.sitemap-section .subsection {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.sitemap-section .subsection li {
+  margin: 8px 0;
+}
+
+.sitemap-section .subsection a {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .sitemap h1 {
+    font-size: 2rem !important;
+    margin-bottom: 30px !important;
+  }
+
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 1rem;
+  }
+
+  .sitemap-section {
+    padding: 20px;
+  }
+
+  .sitemap-section h2 {
+    font-size: 1.1rem;
+  }
+}

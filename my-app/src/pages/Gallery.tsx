@@ -17,6 +17,7 @@ function Gallery() {
       <GalleryCarousel 
         title="Sports" 
         link="/gallery/sports"
+        // jah todo: randomise from all sports images in folder
         images={[
           '/images/landscape-placeholder.jpg',
           '/images/landscape-placeholder.jpg',
@@ -32,8 +33,9 @@ function Gallery() {
       <GalleryCarousel 
         title="Events" 
         link="/gallery/events"
+        // jah todo: same here
         images={[
-          '../images/landscape-placeholder.jpg',
+          '/images/landscape-placeholder.jpg',
           '/images/landscape-placeholder.jpg',
           '/images/landscape-placeholder.jpg',
           '/images/landscape-placeholder.jpg',
@@ -48,6 +50,7 @@ function Gallery() {
       <GalleryCarousel 
         title="Lifestyle" 
         link="/gallery/lifestyle"
+        //jah todo: and here
         images={[
           '/images/landscape-placeholder.jpg',
           '/images/landscape-placeholder.jpg',
@@ -60,21 +63,8 @@ function Gallery() {
         ]}
       />
 
-{/* wedding - currently archived till needed - also can be used for deeper pages in future */}
-      {/* <GalleryCarousel 
-        title="Wedding" 
-        link="/gallery/wedding"
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
-      /> */}
+    {/* Wedding to come soon */}
+
     </div>
   )
 }

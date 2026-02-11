@@ -1,48 +1,14 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import './Lifestyle.css'
+import { Outlet, useLocation, Link, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import './GalleryChildPages.css'
 
 function Lifestyle() {
-  const navigate = useNavigate()
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
-  
-  const images = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    src: `/images/lifestyle/lifestyle-${i + 1}.jpg`,
-    alt: `Lifestyle photo ${i + 1}`
-  }))
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isSubPage = location.pathname !== '/gallery/lifestyle';
 
-  const handleImageClick = (index: number) => {
-    setSelectedImageIndex(index)
-  }
-
-  const handleClose = () => {
-    setSelectedImageIndex(null)
-  }
-
-  const handlePrevious = () => {
-    if (selectedImageIndex !== null) {
-      setSelectedImageIndex(selectedImageIndex === 0 ? images.length - 1 : selectedImageIndex - 1)
-    }
-  }
-
-  const handleNext = () => {
-    if (selectedImageIndex !== null) {
-      setSelectedImageIndex(selectedImageIndex === images.length - 1 ? 0 : selectedImageIndex + 1)
-    }
-  }
-
-  // Handle keyboard navigation
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (selectedImageIndex === null) return
-    
-    if (e.key === 'ArrowLeft') {
-      handlePrevious()
-    } else if (e.key === 'ArrowRight') {
-      handleNext()
-    } else if (e.key === 'Escape') {
-      handleClose()
-    }
+  if (isSubPage) {
+    return <Outlet />;
   }
 
   return (
@@ -75,79 +41,61 @@ function Lifestyle() {
         >
           ← Back to Gallery
         </button>
-        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Lifestyle</h1>
+        <h1 style={{fontSize: '50px', textAlign:'center', margin: 0, flex: 1}}>Events</h1>
         <div style={{ width: '120px' }}></div>
       </div>
       
-      <div className="gallery-grid">
-        {images.map((image, index) => (
-          <div 
-            key={image.id} 
-            className="gallery-item"
-            onClick={() => handleImageClick(index)}
-          >
-            <img 
-              src={image.src} 
-              alt={image.alt}
-              className="gallery-thumbnail"
-            />
-          </div>
-        ))}
-      </div>
+      <GalleryCarousel 
+        title="Graduation" 
+        link="/gallery/lifestyle/graduation"
+        images={Array.from({ length: 22 }, (_, i) => `/images/lifestyle/graduation/graduation-${i + 1}.JPG`)}
+      />
 
-      {/* lightbox modal */}
-      {selectedImageIndex !== null && (
-        <div 
-          className="lightbox-overlay"
-          onClick={handleClose}
-          onKeyDown={handleKeyDown}
-          tabIndex={0}
-          autoFocus
-        >
-          <div className="lightbox-container" onClick={(e) => e.stopPropagation()}>
-            {/* close button */}
-            <button 
-              className="lightbox-close"
-              onClick={handleClose}
-              aria-label="Close lightbox"
-            >
-              ✕
-            </button>
+      <GalleryCarousel 
+        title="Portraits" 
+        link="/gallery/lifestyle/portraits"
+        images={Array.from({ length: 22 }, (_, i) => `/images/lifestyle/portraits/portraits-${i + 1}.JPG`)}
+      />
 
-            {/* back arrow */}
-            <button 
-              className="lightbox-arrow lightbox-prev"
-              onClick={handlePrevious}
-              aria-label="Previous image"
-            >
-              ‹
-            </button>
-
-            {/* image */}
-            <img 
-              src={images[selectedImageIndex].src}
-              alt={images[selectedImageIndex].alt}
-              className="lightbox-image"
-            />
-
-            {/* next arrow */}
-            <button 
-              className="lightbox-arrow lightbox-next"
-              onClick={handleNext}
-              aria-label="Next image"
-            >
-              ›
-            </button>
-
-            {/* image number */}
-            <div className="lightbox-counter">
-              {selectedImageIndex + 1}/{images.length}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   )
+}
+
+function GalleryCarousel({ title, link, images }: { title: string, link: string, images: string[] }) {
+  const [offset, setOffset] = useState(0);
+  const imageWidth = 300; 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOffset((prev) => {
+        const newOffset = prev - 1;
+        return newOffset <= -imageWidth * images.length ? 0 : newOffset;
+      });
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, [images.length, imageWidth]);
+
+  const duplicatedImages = [...images, ...images, ...images];
+
+  return (
+    <Link to={link} className="gallery-carousel-section">
+      <h2 className="gallery-carousel-title">{title}</h2>
+      <div className="gallery-carousel-container">
+        <div 
+          className="gallery-carousel-track"
+          style={{
+            transform: `translateX(${offset}px)`,
+          }}
+        >
+          {duplicatedImages.map((img, index) => (
+            <div key={index} className="gallery-carousel-item">
+              <img src={img} alt={`${title} ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 export default Lifestyle

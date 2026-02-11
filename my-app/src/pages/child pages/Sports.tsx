@@ -1,6 +1,6 @@
 import { Outlet, useLocation, Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import './Sports.css'
+import './GalleryChildPages.css'
 
 function Sports() {
   const location = useLocation();
@@ -51,50 +51,16 @@ function Sports() {
         images={Array.from({ length: 22 }, (_, i) => `/images/sports/rugby/rugby-${i + 1}.JPG`)}
       />
 
-      <GalleryCarousel 
+      {/* <GalleryCarousel 
         title="Football" 
         link="/gallery/sports/football"
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
-      />
+        images={Array.from({ length: 22 }, (_, i) => `/images/sports/football/football-${i + 1}.JPG`)}
+      /> */}
 
-      <GalleryCarousel 
+      {/* <GalleryCarousel 
         title="American Football" 
         link="/gallery/sports/americanfootball"
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
-      />
-
-{/* wedding - currently archived till needed - also can be used for deeper pages in future */}
-      {/* <GalleryCarousel 
-        title="Wedding" 
-        link="/gallery/wedding"
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
+        images={Array.from({ length: 22 }, (_, i) => `/images/sports/americanfootball/americanfootball-${i + 1}.JPG`)}
       /> */}
     </div>
   )

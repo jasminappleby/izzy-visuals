@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './GalleryChildPages.css'
 
-function Rugby() {
+function Nightlife() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
   const images = Array.from({ length: 22 }, (_, i) => ({
     id: i + 1,
-    src: `/images/sports/rugby/rugby-${i + 1}.JPG`,
-    alt: `Rugby photo ${i + 1}`
+    src: `/images/events/birthdays/birthday-${i + 1}.JPG`,
+    alt: `Birthday photo ${i + 1}`
   }))
 
   const handleImageClick = (index: number) => {
@@ -49,7 +49,7 @@ function Rugby() {
     <div className="page-content">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '30px' }}>
         <button 
-          onClick={() => navigate('/gallery/sports')}
+          onClick={() => navigate('/gallery/events')}
           style={{ 
             padding: '10px 20px', 
             cursor: 'pointer',
@@ -73,9 +73,9 @@ function Rugby() {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.15)'
           }}
         >
-          ← Back to Sports
+          ← Back to Events
         </button>
-        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Rugby</h1>
+        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Nightlife</h1>
         <div style={{ width: '120px' }}></div>
       </div>
       
@@ -150,4 +150,4 @@ function Rugby() {
   )
 }
 
-export default Rugby
+export default Nightlife

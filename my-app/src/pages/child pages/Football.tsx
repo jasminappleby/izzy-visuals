@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './GalleryChildPages.css'
 
-function Rugby() {
+function Football() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
   const images = Array.from({ length: 22 }, (_, i) => ({
     id: i + 1,
-    src: `/images/sports/rugby/rugby-${i + 1}.JPG`,
-    alt: `Rugby photo ${i + 1}`
+    src: `/images/sports/football/football-${i + 1}.JPG`,
+    alt: `Football photo ${i + 1}`
   }))
 
   const handleImageClick = (index: number) => {
@@ -75,7 +75,7 @@ function Rugby() {
         >
           ← Back to Sports
         </button>
-        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Rugby</h1>
+        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Football</h1>
         <div style={{ width: '120px' }}></div>
       </div>
       
@@ -150,4 +150,4 @@ function Rugby() {
   )
 }
 
-export default Rugby
+export default Football
