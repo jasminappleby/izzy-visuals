@@ -1,5 +1,6 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import useLocalStorage from 'use-local-storage'
+import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,6 +35,8 @@ function App() {
   const isActive = (path: string): boolean => {
     return location.pathname === path;
   };
+
+/* ADDED: solid navbar on scroll */ useEffect(() => { const nav = document.querySelector('.desktop-nav'); const handleScroll = () => { if (window.scrollY > 80) { nav?.classList.add('solid'); } else { nav?.classList.remove('solid'); } }; window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []); /* END ADDED */
 
   return (
       <div className="App" data-theme={theme}>
