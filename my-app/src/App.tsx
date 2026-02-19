@@ -1,6 +1,6 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import useLocalStorage from 'use-local-storage'
-import { useEffect } from 'react'
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,11 +21,16 @@ import Lifestyle from './pages/child pages/Lifestyle'
 import Graduation from './pages/child pages/Graduation'
 import Portraits from './pages/child pages/Portraits'
 import SiteMap from './pages/child pages/SiteMap'
+import HeroTest from './pages/HeroTest';
 
 function App() {
   const location = useLocation();
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+  const [hideNav, setHideNav] = useState(false);
+  const [lastScroll, setLastScroll] = useState(0);
+
 
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -36,7 +41,25 @@ function App() {
     return location.pathname === path;
   };
 
-/* ADDED: solid navbar on scroll */ useEffect(() => { const nav = document.querySelector('.desktop-nav'); const handleScroll = () => { if (window.scrollY > 80) { nav?.classList.add('solid'); } else { nav?.classList.remove('solid'); } }; window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []); /* END ADDED */
+    useEffect(() => {
+    const handleScroll = () => {
+      const current = window.scrollY;
+
+      if (current > lastScroll && current > 80) {
+        // scrolling down
+        setHideNav(true);
+      } else {
+        // scrolling up
+        setHideNav(false);
+      }
+
+      setLastScroll(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScroll]);
+
 
   return (
       <div className="App" data-theme={theme}>
@@ -69,7 +92,7 @@ function App() {
             </ul>
           </nav>
 
-        <nav className="desktop-nav">
+        <nav className={`desktop-nav ${hideNav ? "hide" : ""}`}>
             <div className="desktop-nav-content">
               <Link to="/" className="logo-link">
                 <img 
@@ -106,6 +129,7 @@ function App() {
             <Route path="faq" element={<FAQ />} />
           </Route>
           <Route path="/sitemap" element={<SiteMap />} />
+          <Route path="/hero-test" element={<HeroTest />} />
         </Routes>
 
         <button onClick={switchTheme} id="fixed-button"> 

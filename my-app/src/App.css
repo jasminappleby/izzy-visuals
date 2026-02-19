@@ -19,7 +19,6 @@ body {
 }
 
 
-
 /* desktop nav */
 .desktop-nav {
   display: none;
@@ -27,18 +26,21 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
-  background: linear-gradient(
-    to bottom,
-    var(--background) 0%,
-    var(--background) 40%,
-    rgba(0, 0, 0, 0) 100%
-  );
-
-  box-shadow: none;
+  background-color: var(--background, #ffffff); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   padding: 0 3rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.desktop-nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 140px;
+  height: 100px;
 }
 
 .desktop-nav-content {
@@ -56,8 +58,12 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-
-
+/* hide on scroll */
+.desktop-nav.hide { 
+  transform: translateY(-100%); 
+  opacity: 0; 
+  pointer-events: none; 
+}
 
 
 .logo-link {

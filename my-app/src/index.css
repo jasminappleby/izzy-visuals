@@ -40,19 +40,21 @@ html, body {
   color: var(--text-primary);
   cursor: pointer;
   transition: border-color 0.5s;
-}
-#fixed-button:hover {
-  border-color: #e2df3bd8;
-}
-#fixed-button:focus,
-#fixed-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-#fixed-button{
   position: fixed; 
   bottom: 80px; 
   right: 30px;
+  z-index: 9999;
 }
+
+#fixed-button:hover {
+  border-color: #e2df3bd8;
+}
+
+#fixed-button:focus, #fixed-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
 
 /* Hyperlinks */
 a {

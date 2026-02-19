@@ -1,0 +1,120 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* -------------------------------------- */
+/* 1) BACKGROUND IMAGE (base layer)       */
+/* -------------------------------------- */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/sports/rugby/rugby-3.JPG");
+  background-size: contain;        /* preserves proportions */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+/* -------------------------------------- */
+/* 2) GLASS OVERLAY (frosted effect)      */
+/* -------------------------------------- */
+.hero-glass-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  background: rgba(255, 255, 255, 0.05); /* subtle frost */
+  z-index: 2;
+}
+
+/* -------------------------------------- */
+/* 3) GIANT TEXT (behind player)          */
+/* -------------------------------------- */
+.hero-glass-text {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 18vw;
+  font-weight: 900;
+  line-height: 0.85;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.15);
+
+  /* optional subtle glow (looks good on sports images) */
+  text-shadow: 0 0 40px rgba(255,255,255,0.25);
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* -------------------------------------- */
+/* 4) PLAYER CUTOUT (foreground)          */
+/* -------------------------------------- */
+.hero-player {
+  position: absolute;
+  left: 220px;   /* your aligned values */
+  top: -90px;    /* your aligned values */
+  width: 1000px; /* your chosen scale */
+  z-index: 4;
+}
+
+/* -------------------------------------- */
+/* 5) BOTTOM LABEL                        */
+/* -------------------------------------- */
+.hero-label {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  z-index: 5;
+}
+
+/* -------------------------------------- */
+/* MOBILE LAYOUT (true mobile redesign)   */
+/* -------------------------------------- */
+@media (max-width: 768px) {
+
+  /* Make background fill vertically */
+  .hero-bg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Center the giant text */
+  .hero-glass-text {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22vw;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Reposition the player to the right side */
+  .hero-player {
+    width: 800px;
+    left: -80px;
+    top: 40px;
+    /* transform: translateY(-50%); */
+  }
+
+  /* Move the label slightly up */
+  .hero-label {
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Slightly stronger blur for readability */
+  .hero-glass-overlay {
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+  }
+}

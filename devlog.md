@@ -76,4 +76,7 @@ need to collect some images from izzy, for the page contents, and make the homep
 note to self: randomise images that show up on the main gallery page so that every time a user goes onto it it shows diff pics pulled from each gallery under that section. showing a variety seems way cool. 
 
 # 11/02/2026 
-fixed up all the pages and child pages in the gallery so should all now be relevant, just needing images. gonna also work on the landing page, want a short carosel like 5 photos, a bit greyed out, izzy visuals ontop of it, maybe a white bordering square around the edge of the image, idk if i want that to go dark in dark mode / go light in dark mode and dark in light mode lol 
+fixed up all the pages and child pages in the gallery so should all now be relevant, just needing images. worked on the landing page, want a short carosel like 5 photos, a bit greyed out, izzy visuals ontop of it. did it, looks shite. isreal thinks its ok but now hates colour scheme, and says something is off about the site. mint.
+
+# 19/02/2026
+Need to fix nav today a
