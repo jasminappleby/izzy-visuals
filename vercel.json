@@ -1,6 +1,11 @@
 {
-  "buildCommand": "cd my-app && npm install && npm run build",
+  "buildCommand": "npm install && cd my-app && npm install && npm run build",
   "outputDirectory": "my-app/dist",
+  "functions": {
+    "api/contact.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
