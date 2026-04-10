@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import './App.css'
-import Home from './pages/Home'
+import NewHomepage from './pages/NewHomepage'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
@@ -67,25 +67,25 @@ function App() {
           <ul>
             <li>
               <Link to="/" className={isActive('/') ? 'active' : ''}>
-                <span className="icon"><FontAwesomeIcon icon={faHomeUser} color="#DAA520" /></span>
+                <span className="icon"><FontAwesomeIcon icon={faHomeUser} color={theme === 'light' ? '#000000' : '#ffffff'} /></span>
                 <span className="label">Home</span>
               </Link>
             </li>
             <li>
               <Link to="/about" className={isActive('/about') ? 'active' : ''}>
-                <span className="icon"><FontAwesomeIcon icon={faUser} color="#DAA520" /></span>
+                <span className="icon"><FontAwesomeIcon icon={faUser} color={theme === 'light' ? '#000000' : '#ffffff'} /></span>
                 <span className="label">About</span>
               </Link>
             </li>
             <li>
               <Link to="/gallery" className={isActive('/gallery') || location.pathname.startsWith('/gallery/') ? 'active' : ''}>
-                  <span className="icon"><FontAwesomeIcon icon={faImages} color="#DAA520" /></span>
+                  <span className="icon"><FontAwesomeIcon icon={faImages} color={theme === 'light' ? '#000000' : '#ffffff'} /></span>
                   <span className="label">Gallery</span>
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
-                  <span className="icon"><FontAwesomeIcon icon={faInbox} color="#DAA520" /></span>
+                  <span className="icon"><FontAwesomeIcon icon={faInbox} color={theme === 'light' ? '#000000' : '#ffffff'} /></span>
                   <span className="label">Contact</span>
                 </Link>
               </li>
@@ -111,7 +111,7 @@ function App() {
           </nav> 
         
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<NewHomepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />}>
             <Route path="events" element={<Events />} />
@@ -140,7 +140,7 @@ function App() {
           <div className="footer-content">
             <p>{new Date().getFullYear()} Izzy Visuals</p>
             <div className="footer-links">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.instagram.com/izzyvisuals__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
               <span>•</span>
               <a href="mailto:Izzyvisuals14@gmail.com">Email</a>
               <span>•</span>

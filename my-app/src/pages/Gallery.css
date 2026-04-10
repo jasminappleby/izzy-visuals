@@ -25,7 +25,7 @@
 }
 
 .gallery-carousel-section:hover .gallery-carousel-title {
-  color: #DAA520;
+  color: var(--accent);
 }
 
 .gallery-carousel-container {
