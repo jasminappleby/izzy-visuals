@@ -63,7 +63,7 @@ function Gallery() {
         ]}
       />
 
-    {/* Wedding to come soon */}
+    {/* Wedding to come soon , maybe go into events? */}
 
     </div>
   )

@@ -9,9 +9,9 @@ function NewHomepage() {
         <div className="hero-content">
           <div className="hero-text-block">
             <h1 className="hero-title">VISUAL<br />STORYTELLER</h1>
-            <p className="hero-subtitle">Capturing moments that matter</p>
+            <p className="hero-subtitle">Capturing moments that matter.</p>
             <p className="hero-description">
-              Freelance photographer specializing in sports, events & lifestyle photography
+              Freelance photographer specialising in sports, events & lifestyle photography.
             </p>
             <Link to="/contact" className="cta-button">
               Book a Session
@@ -31,21 +31,21 @@ function NewHomepage() {
             <div className="specialty-icon">⚽</div>
             <h3>Sports</h3>
             <p>Dynamic action shots capturing the intensity and energy of athletic moments</p>
-            <Link to="/gallery/sports" className="specialty-link">Explore Work →</Link>
+            <Link to="/gallery/sports" className="specialty-link">Explore Sport →</Link>
           </div>
 
           <div className="specialty-card events">
             <div className="specialty-icon">🎉</div>
             <h3>Events</h3>
             <p>Memorable celebrations documented with creativity and attention to detail</p>
-            <Link to="/gallery/events" className="specialty-link">Explore Work →</Link>
+            <Link to="/gallery/events" className="specialty-link">Explore Events →</Link>
           </div>
 
           <div className="specialty-card lifestyle">
             <div className="specialty-icon">✨</div>
             <h3>Lifestyle</h3>
             <p>Authentic portraits and lifestyle moments that tell your unique story</p>
-            <Link to="/gallery/lifestyle" className="specialty-link">Explore Work →</Link>
+            <Link to="/gallery/lifestyle" className="specialty-link">Explore Lifestyle →</Link>
           </div>
 
         </div>
@@ -72,7 +72,7 @@ function NewHomepage() {
 
       <section className="final-cta-section">
         <h2>Ready to Capture Your Moments?</h2>
-        <p>Let's create something beautiful together</p>
+        <p>Let's create together</p>
         <Link to="/contact" className="cta-button primary">Get in Touch</Link>
       </section>
     </div>
