@@ -1,0 +1,29 @@
+.image-container {
+    display: inline-block;
+    width: 46%;
+    text-align: center;
+}
+
+.paragraph-1 {
+    display: inline-block;
+    width: 46%;
+    text-align: center;
+    /* padding-top: 5%; */
+    /* margin-bottom: 20px; */
+    font-size: small;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 620px) {
+    .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+        text-align: center;
+    }
+    .paragraph-1 {
+        width: 100%;
+        display: block;
+    }
+}
