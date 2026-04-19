@@ -41,20 +41,23 @@ function Lifestyle() {
         >
           ← Back to Gallery
         </button>
-        <h1 style={{fontSize: '50px', textAlign:'center', margin: 0, flex: 1}}>Events</h1>
+        <h1 style={{fontSize: '50px', textAlign:'center', margin: 0, flex: 1}}>Lifestyle</h1>
         <div style={{ width: '120px' }}></div>
       </div>
       
+      {/* current lengths are based on how many photos are in folder, 
+      when this grows, cap at 12? */}
+
       <GalleryCarousel 
         title="Graduation" 
         link="/gallery/lifestyle/graduation"
-        images={Array.from({ length: 22 }, (_, i) => `/images/lifestyle/graduation/graduation-${i + 1}.JPG`)}
+        images={Array.from({ length: 8 }, (_, i) => `/images/lifestyle/graduation/graduation-${i + 1}.jpg`)}
       />
 
       <GalleryCarousel 
         title="Portraits" 
         link="/gallery/lifestyle/portraits"
-        images={Array.from({ length: 22 }, (_, i) => `/images/lifestyle/portraits/portraits-${i + 1}.JPG`)}
+        images={Array.from({ length: 4 }, (_, i) => `/images/lifestyle/portraits/portraits-${i + 1}.jpg`)}
       />
 
     </div>

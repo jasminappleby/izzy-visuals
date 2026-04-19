@@ -72,7 +72,7 @@ function NewHomepage() {
 
       <section className="final-cta-section">
         <h2>Ready to Capture Your Moments?</h2>
-        <p>Let's create together</p>
+        <p>Let's create memories together</p>
         <Link to="/contact" className="cta-button primary">Get in Touch</Link>
       </section>
     </div>

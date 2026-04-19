@@ -6,10 +6,10 @@ function Nightlife() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 4 }, (_, i) => ({
     id: i + 1,
-    src: `/images/events/birthdays/birthday-${i + 1}.JPG`,
-    alt: `Birthday photo ${i + 1}`
+    src: `/images/events/nightlife/nightlife-${i + 1}.jpg`,
+    alt: `Nightlife photo ${i + 1}`
   }))
 
   const handleImageClick = (index: number) => {

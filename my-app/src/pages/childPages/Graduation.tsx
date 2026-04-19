@@ -6,9 +6,9 @@ function Graduation() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 8 }, (_, i) => ({
     id: i + 1,
-    src: `/images/lifestyle/graduation/graduation-${i + 1}.JPG`,
+    src: `/images/lifestyle/graduation/graduation-${i + 1}.jpg`,
     alt: `Graduation photo ${i + 1}`
   }))
 

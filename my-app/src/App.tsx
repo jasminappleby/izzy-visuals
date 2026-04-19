@@ -22,6 +22,7 @@ import Graduation from './pages/childPages/Graduation'
 import Portraits from './pages/childPages/Portraits'
 import SiteMap from './pages/childPages/SiteMap'
 import HeroTest from './pages/HeroTest';
+import PrivateEvents from './pages/childPages/PrivateEvents';
 
 function App() {
   const location = useLocation();
@@ -117,6 +118,7 @@ function App() {
             <Route path="events" element={<Events />} />
               <Route path="events/birthdays" element={<Birthday />} />
               <Route path="events/nightlife" element={<Nightlife />} />
+              <Route path="events/private" element={<PrivateEvents />} />
             <Route path="sports" element={<Sports />} />
               <Route path="sports/rugby" element={<Rugby />} />
               <Route path="sports/football" element={<Football />} />

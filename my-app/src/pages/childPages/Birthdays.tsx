@@ -6,10 +6,10 @@ function Birthday() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 21 }, (_, i) => ({
     id: i + 1,
-    src: `/images/events/nightlife/nightlife-${i + 1}.JPG`,
-    alt: `Nightlife photo ${i + 1}`
+    src: `/images/events/birthday/birthday-${i + 1}.jpg`,
+    alt: `Birthday photo ${i + 1}`
   }))
 
   const handleImageClick = (index: number) => {
@@ -49,7 +49,7 @@ function Birthday() {
     <div className="page-content">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '30px' }}>
         <button 
-          onClick={() => navigate('/gallery')}
+          onClick={() => navigate('/gallery/events')}
           style={{ 
             padding: '10px 20px', 
             cursor: 'pointer',
@@ -73,7 +73,7 @@ function Birthday() {
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.15)'
           }}
         >
-          ← Back to Gallery
+          ← Back to Events
         </button>
         <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Birthday</h1>
         <div style={{ width: '120px' }}></div>

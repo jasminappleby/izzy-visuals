@@ -44,24 +44,27 @@ function Sports() {
         <h1 style={{fontSize: '50px', textAlign:'center', margin: 0, flex: 1}}>Sports</h1>
         <div style={{ width: '120px' }}></div>
       </div>
+
+      {/* current lengths are based on how many photos are in folder, 
+      when this grows, cap at 12? */}
       
       <GalleryCarousel 
         title="Rugby" 
         link="/gallery/sports/rugby"
-        images={Array.from({ length: 22 }, (_, i) => `/images/sports/rugby/rugby-${i + 1}.JPG`)}
+        images={Array.from({ length: 16 }, (_, i) => `/images/sports/rugby/rugby-${i + 1}.jpg`)}
       />
 
-      {/* <GalleryCarousel 
+      <GalleryCarousel 
         title="Football" 
         link="/gallery/sports/football"
-        images={Array.from({ length: 22 }, (_, i) => `/images/sports/football/football-${i + 1}.JPG`)}
-      /> */}
+        images={Array.from({ length: 15 }, (_, i) => `/images/sports/football/football-${i + 1}.jpg`)}
+      />
 
-      {/* <GalleryCarousel 
+      <GalleryCarousel 
         title="American Football" 
         link="/gallery/sports/americanfootball"
-        images={Array.from({ length: 22 }, (_, i) => `/images/sports/americanfootball/americanfootball-${i + 1}.JPG`)}
-      /> */}
+        images={Array.from({ length: 14 }, (_, i) => `/images/sports/americanfootball/americanfootball-${i + 1}.jpg`)}
+      />
     </div>
   )
 }
