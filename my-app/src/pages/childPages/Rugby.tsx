@@ -6,9 +6,9 @@ function Rugby() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 31 }, (_, i) => ({
     id: i + 1,
-    src: `/images/sports/rugby/rugby-${i + 1}.JPG`,
+    src: `/images/sports/rugby/rugby-${i + 1}.jpg`,
     alt: `Rugby photo ${i + 1}`
   }))
 

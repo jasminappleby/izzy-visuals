@@ -6,9 +6,9 @@ function Portraits() {
   const navigate = useNavigate()
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
   
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 4 }, (_, i) => ({
     id: i + 1,
-    src: `/images/lifestyle/portraits/portraits-${i + 1}.JPG`,
+    src: `/images/lifestyle/portraits/portraits-${i + 1}.jpg`,
     alt: `Portraits photo ${i + 1}`
   }))
 

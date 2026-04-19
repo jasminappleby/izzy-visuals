@@ -24,6 +24,7 @@ function SiteMap() {
                   <ul className="subsection">
                     <li><Link to="/gallery/events/birthdays">Birthdays</Link></li>
                     <li><Link to="/gallery/events/nightlife">Nightlife</Link></li>
+                    <li><Link to="/gallery/events/private">Private Events</Link></li>
                   </ul>
               <li>
                 <h3><Link to="/gallery/sports">Sports</Link></h3>
