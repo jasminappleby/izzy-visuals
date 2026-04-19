@@ -2,9 +2,57 @@ import { Outlet, useLocation, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './Gallery.css'
 
+// Helper function to get all images from categories
+function getAllImagesForCategory(categories: { folder: string; prefix: string; count: number }[]): string[] {
+  const images: string[] = []
+  categories.forEach(({ folder, prefix, count }) => {
+    for (let i = 1; i <= count; i++) {
+      images.push(`/images/${folder}/${prefix}-${i}.jpg`)
+    }
+  })
+  return images
+}
+
+// Helper function to shuffle array and get N random items
+function getRandomImages(images: string[], count: number): string[] {
+  const shuffled = [...images].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, Math.min(count, shuffled.length))
+}
+
 function Gallery() {
   const location = useLocation();
   const isSubPage = location.pathname !== '/gallery';
+
+  const [sportsImages, setSportsImages] = useState<string[]>([])
+  const [eventsImages, setEventsImages] = useState<string[]>([])
+  const [lifestyleImages, setLifestyleImages] = useState<string[]>([])
+
+  useEffect(() => {
+// counts will need to change as photos are added in future.
+
+    // Sports
+    const sportsCats = [
+      { folder: 'sports/americanfootball', prefix: 'americanfootball', count: 14 },
+      { folder: 'sports/football', prefix: 'football', count: 15 },
+      { folder: 'sports/rugby', prefix: 'rugby', count: 31 }
+    ]
+    setSportsImages(getRandomImages(getAllImagesForCategory(sportsCats), 16))
+
+    // Events
+    const eventsCats = [
+      { folder: 'events/birthday', prefix: 'birthday', count: 21 },
+      { folder: 'events/nightlife', prefix: 'nightlife', count: 4 },
+      { folder: 'events/private', prefix: 'private', count: 10 }
+    ]
+    setEventsImages(getRandomImages(getAllImagesForCategory(eventsCats), 16))
+
+    // Lifestyle 
+    const lifestyleCats = [
+      { folder: 'lifestyle/graduation', prefix: 'graduation', count: 8 },
+      { folder: 'lifestyle/portraits', prefix: 'portraits', count: 4 }
+    ]
+    setLifestyleImages(getRandomImages(getAllImagesForCategory(lifestyleCats), 16))
+  }, [])
 
   if (isSubPage) {
     return <Outlet />;
@@ -17,50 +65,20 @@ function Gallery() {
       <GalleryCarousel 
         title="Sports" 
         link="/gallery/sports"
-        // jah todo: randomise from all sports images in folder
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
+        images={sportsImages}
       />
       
       <GalleryCarousel 
         title="Events" 
         link="/gallery/events"
-        // jah todo: same here
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
+        images={eventsImages}
       />
       
       
       <GalleryCarousel 
         title="Lifestyle" 
         link="/gallery/lifestyle"
-        //jah todo: and here
-        images={[
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-          '/images/landscape-placeholder.jpg',
-        ]}
+        images={lifestyleImages}
       />
 
     {/* Wedding to come soon , maybe go into events? */}
