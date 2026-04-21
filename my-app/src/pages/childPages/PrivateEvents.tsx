@@ -75,7 +75,7 @@ function PrivateEvents() {
         >
           ← Back to Events
         </button>
-        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>American Football</h1>
+        <h1 style={{ fontSize: '30px', textAlign: 'center', margin: 0, flex: 1 }}>Private Events</h1>
         <div style={{ width: '120px' }}></div>
       </div>
       
