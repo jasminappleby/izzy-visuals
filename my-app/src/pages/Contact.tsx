@@ -127,6 +127,7 @@ function Contact() {
             </select>
           </div>
 
+{/* noticed can put date in the past, not good, so add min attribute */}
           <div className="form-group">
             <label htmlFor="proposedDate">Proposed Date *</label>
             <input
