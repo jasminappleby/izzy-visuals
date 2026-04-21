@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="page-content">
           <div className='image-container'>
-            <img src="/images/sports/rugby/rugby-1.JPG" alt="placeholder image" style={{ maxWidth: '75%', height: 'auto', objectFit: 'cover', borderRadius: '150px 150px 0px 0px' }}/>
+            <img src="/images/IMG_5715.heic" alt="placeholder image" style={{ maxWidth: '75%', height: 'auto', objectFit: 'cover', borderRadius: '150px 150px 0px 0px' }}/>
           </div>
           <div className="paragraph-1">
             <h1 style={{fontSize: '50px', textAlign:'center'}}>About Me</h1>
