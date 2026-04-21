@@ -46,7 +46,8 @@ function SiteMap() {
             <h2>Resources</h2>
             <ul>
               <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/contact/faq">FAQ</Link></li>
+              {/* reimplement when FAQs are properly discussed - jah */}
+              {/* <li><Link to="/contact/faq">FAQ</Link></li> */}
             </ul>
           </div>
         </div>

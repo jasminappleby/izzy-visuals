@@ -81,9 +81,11 @@ function Contact() {
       <h1 style={{fontSize: '50px', textAlign:'center'}}>Contact Me</h1>
 
       <br/>
-      <div className="faq-prompt">
-        <p>Have questions? <a href="/contact/faq">Check out our FAQs</a> to learn more about how we work!</p>
-      </div>
+      {/* reimplement when FAQs are properly discussed - jah */}
+      {/* <div className="faq-prompt">
+        <p>Have questions? <a href="/contact/faq">Check out the FAQs</a> to learn more about how I work!</p>
+      </div> */}
+    
       
       <div className="contact-form-container">
         <form onSubmit={handleSubmit} className="contact-form">
