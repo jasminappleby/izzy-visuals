@@ -13,7 +13,7 @@ function About() {
             </p>
             <br/>
             <p>
-              I am an aspriring photographer building my portfolio and skills. My goal is to create stunning visuals that resonate with viewers and leave a lasting impression.
+              My goal is to create stunning visuals that resonate with viewers and leave a lasting impression.
             </p>
             <br/>
             <p>
