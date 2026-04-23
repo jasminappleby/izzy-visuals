@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
 
+import { Analytics } from "@vercel/analytics/next"
+
 import './App.css'
 import NewHomepage from './pages/NewHomepage'
 import About from './pages/About'
@@ -150,6 +152,7 @@ function App() {
             </div>
           </div>
         </footer>
+        <Analytics />
       </div>
   )
 }
