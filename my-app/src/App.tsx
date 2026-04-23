@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 import './App.css'
 import NewHomepage from './pages/NewHomepage'
