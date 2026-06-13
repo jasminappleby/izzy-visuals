@@ -1,6 +1,5 @@
 import { Outlet, useLocation, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import SEO from '../components/SEO'
 import './Gallery.css'
 
 // Helper function to get all images from categories
@@ -61,11 +60,6 @@ function Gallery() {
 
   return (
     <>
-      <SEO 
-        title="Gallery | Izzy Visuals"
-        description="Explore my photography portfolio featuring sports, events, and lifestyle photography. Browse stunning visual stories captured through my lens."
-        url="https://izzyvisuals.com/gallery"
-      />
       <div className="page-content">
       <h1 style={{fontSize: '50px', textAlign:'center', marginBottom: '3rem'}}>Gallery</h1>
       
