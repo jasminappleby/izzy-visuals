@@ -1,14 +1,8 @@
 import './About.css'
-import SEO from '../components/SEO'
 
 function About() {
   return (
     <div className="page-content">
-      <SEO 
-        title="About Me | Izzy Visuals"
-        description="Learn more about Izzy, a passionate photographer specialising in sports, events, and lifestyle photography. Capturing authentic moments with creativity and technical expertise."
-        url="https://izzyvisuals.com/about"
-      />
           <div className='image-container'>
             <img src="/images/IMG_5715.heic" alt="placeholder image" style={{ maxWidth: '75%', height: 'auto', objectFit: 'cover', borderRadius: '150px 150px 0px 0px' }}/>
           </div>
