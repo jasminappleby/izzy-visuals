@@ -1,5 +1,4 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
-import useLocalStorage from 'use-local-storage'
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHomeUser, faImages, faInbox, faUser } from '@fortawesome/free-solid-svg-icons';
@@ -29,7 +28,10 @@ import PrivateEvents from './pages/childPages/PrivateEvents';
 function App() {
   const location = useLocation();
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  const [theme, setTheme] = useState<string>(() => {
+    const saved = localStorage.getItem('theme');
+    return saved || (defaultDark ? 'dark' : 'light');
+  });
 
   const [hideNav, setHideNav] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
@@ -38,6 +40,7 @@ function App() {
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   }
 
   const isActive = (path: string): boolean => {
