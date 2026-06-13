@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Contact.css'
 
 function Contact() {
@@ -77,7 +78,13 @@ function Contact() {
   }
 
   return (
-    <div className="page-content">
+    <>
+      <SEO 
+        title="Contact Me | Izzy Visuals"
+        description="Get in touch with Izzy to book a photography session. Specialising in sports, events, and lifestyle photography."
+        url="https://izzyvisuals.com/contact"
+      />
+      <div className="page-content">
       <h1 style={{fontSize: '50px', textAlign:'center'}}>Contact Me</h1>
 
       <br/>
@@ -171,6 +178,7 @@ function Contact() {
         </form>
       </div>
     </div>
+    </>
   )
 }
 
