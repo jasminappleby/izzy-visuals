@@ -1,10 +1,30 @@
 import './NewHomepage.css'
 import { Link } from 'react-router-dom'
 import ImageSlideshow from '../components/ImageSlideshow'
+import SEO from '../components/SEO'
+import StructuredData from '../components/StructuredData'
 
 function NewHomepage() {
+  const organizationData = {
+    name: 'Izzy Visuals',
+    description: 'Professional freelance photographer specialising in sports, events & lifestyle photography',
+    image: '/images/logo.png',
+    url: 'https://izzyvisuals.com',
+    email: 'izzyvisuals14@gmail.com',
+    sameAs: [
+      'https://www.instagram.com/izzyvisuals__'
+    ],
+    areaServed: 'Worldwide'
+  };
+
   return (
     <div className="new-homepage">
+      <SEO 
+        title="Izzy Visuals - Professional Photography"
+        description="Freelance photographer specialising in sports, events & lifestyle photography. Capturing moments that matter."
+        url="https://izzyvisuals.com"
+      />
+      <StructuredData type="LocalBusiness" data={organizationData} />
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text-block">
